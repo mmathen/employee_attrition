@@ -1,0 +1,18 @@
+include *.txt
+include *.md
+include *.pkl
+recursive-include ./employee_attrition_model *
+
+include employee_attrition_model/datasets/bike-rental-dataset.csv
+include employee_attrition_model/datasets/test.csv
+include employee_attrition_model/trained_models/*.pkl
+include employee_attrition_model/VERSION
+include employee_attrition_model/config.yml
+
+include ./requirements/requirements.txt
+include ./requirements/test_requirements.txt
+exclude *.log
+exclude *.cfg
+
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]

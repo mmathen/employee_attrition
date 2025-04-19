@@ -1,0 +1,116 @@
+# Package Overview
+package_name: employee_attrition_model
+
+# Data Files
+training_data_file: wa_fn_usec_hr_employee_attrition_tsv.csv
+pipeline_name: employee_attrition_model
+pipeline_save_file: employee_attrition__model_output_v
+
+# Variables
+# The variable we are attempting to predict (cnt)
+target: attrition
+
+
+
+# Features that will go inside processing pipeline
+features:
+  - age
+  - businesstravel
+  - dailyrate
+  - department
+  - distancefromhome
+  - education
+  - educationfield
+  - employeecount
+  - employeenumber
+  - environmentsatisfaction
+  - gender
+  - hourlyrate            
+  - jobinvolvement
+  - joblevel
+  - jobrole
+  - jobsatisfaction
+  - maritalstatus
+  - monthlyincome
+  - monthlyrate
+  - numcompaniesworked
+  - over18
+  - overtime
+  - percentsalaryhike
+  - performancerating
+  - relationshipsatisfaction
+  - standardhours
+  - stockoptionlevel
+  - totalworkingyears
+  - trainingtimeslastyear
+  - worklifebalance
+  - yearsatcompany
+  - yearsincurrentrole
+  - yearssincelastpromotion
+  - yearswithcurrmanager
+  
+
+
+
+#unused_fields:  # Features to drop before pipeline
+
+
+
+# Features names
+
+# age_var: age
+# businesstravel_var: businesstravel
+# dailyrate_var: dailyrate
+# department_var: department
+# distancefromhome_var: distancefromhome
+# education_var: education
+# educationfield_var: educationfield
+# employeecount_var: employeecount
+# employeenumber_var: employeenumber
+# environmentsatisfaction_var: environmentsatisfaction
+# gender_var: gender
+# hourlyrate_var: hourlyrate
+# jobinvolvement_var: jobinvolvement
+# joblevel_var: joblevel
+# jopinrole_var: jobrole
+# jobsatisfaction_var: jobsatisfaction
+# maritalstatus_var: maritalstatus
+# monthlyincome_var: monthlyincome
+# monthlyrate_var: monthlyrate
+# numcompaniesworked_var: numcompaniesworked
+# over18_var: over18
+# overtime_var: overtime
+# percentsalaryhike_var: percentsalaryhike
+# performancerating_var: performancerating
+# relationshipsatisfaction_var: relationshipsatisfaction
+# standardhours_var: standardhours
+# stockoptionlevel_var: stockoptionlevel
+# totalworkingyears_var: totalworkingyears
+# trainingtimeslastyear_var: trainingtimeslastyear
+# worklifebalance_var: worklifebalance
+# yearsatcompany_var: yearsatcompany
+# yearsincurrentrole_var: yearsincurrentrole
+# yearssincelastpromotion_var: yearssincelastpromotion 
+# yearswithcurrmanager_var: yearswithcurrmanager
+
+
+
+
+  
+# Set train/test split
+test_size: 0.20
+
+# Set the random seed
+random_state: 42
+
+# Alogrithm parameters
+random_seed: 42
+logging_level: silent
+model_type: CatBoostClassifier
+anova_k: 15
+correlation_threshold: 0.75
+# default_categorical_features:
+#   - business_travel
+#   - department
+#   - education_field
+#   -
